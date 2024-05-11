@@ -1,0 +1,18 @@
+@if (type() === 'solid') {
+<button
+type="button"
+  (click)="onClick()"
+  class="bg-gradient-to-r cursor-pointer from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-2 px-4 rounded"
+>
+  {{ label() }}
+</button>
+} @else {
+<button
+type="button"
+  (click)="onClick()"
+  class="border-2 cursor-pointer border-purple-600 hover:border-transparent hover:bg-gradient-to-r from-purple-600 to-pink-600 text-purple-600 hover:text-white font-bold py-2 px-4 rounded"
+>
+  {{ label() }}
+</button>
+
+}

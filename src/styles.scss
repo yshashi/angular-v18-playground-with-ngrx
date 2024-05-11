@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text-link {
+    @apply text-purple-600 hover:text-pink-600 hover:underline;
+  }
+
+  .text-link-hover {
+    @apply hover:text-pink-600 hover:underline
+  }
+
+  .text-link-active {
+    @apply text-pink-600 underline
+  }
+}

@@ -1,0 +1,33 @@
+<div class="w-full">
+  <section class="relative overflow-hidden py-20">
+    <div class="relative">
+      <div class="mx-auto max-w-xl lg:max-w-7xl">
+        <div class="mx-auto mb-14 max-w-2xl text-center">
+          <span
+            class="mb-4 inline-block rounded-full bg-gray-50 px-3 py-1 text-xs font-semibold text-black"
+          >
+            OUR BLOG
+          </span>
+          <h1 class="text-5xl font-bold">Latest news from our blog</h1>
+        </div>
+        <div class="grid grid-cols-2 gap-5">
+          <app-recent-blog />
+          <app-trending-blogs />
+        </div>
+        <div class="mt-14 text-center">
+          <app-button
+            (handleClick)="toggleBlogVisiblity()"
+            type="outlined"
+            label="{{ showAllBlogs() ? 'Hide' : 'Show' }} all blogs"
+          />
+          @defer (when showAllBlogs()) { @if (showAllBlogs()) {
+          @for (item of blogs; track $index) {
+            <app-blogs />
+          }
+          } }
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="my-8" />
+</div>
