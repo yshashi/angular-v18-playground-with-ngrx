@@ -11,7 +11,7 @@ export class BlogService {
   readonly #http = inject(HttpClient);
 
   getBlogs() {
-    return this.#http.get<Blog[]>('app/shared/data/blogs.json');
+    return this.#http.get<Blog[]>('assets/data/blogs.json');
   }
 
   getTrendingBlogs() {

@@ -1,6 +1,6 @@
-<header class="relative w-full border-b bg-white">
-  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
-    <app-logo />
+<header class="relative w-full bg-white border-b">
+  <div class="flex items-center justify-between px-4 py-2 mx-auto max-w-7xl">
+    <app-logo routerLink="/pages" />
     <div class="hidden lg:block">
       <ul class="inline-flex space-x-8">
         <li>
@@ -30,10 +30,23 @@
             Contact
           </a>
         </li>
+        <li>
+          <a
+            routerLink="/pages/widget"
+            routerLinkActive="text-link-active"
+            class="text-sm font-semibold cursor-pointer text-link-hover"
+          >
+            Widget
+          </a>
+        </li>
       </ul>
     </div>
     <div class="hidden lg:block">
-      <app-button label="login" />
+     @if (isLoggedIn) {
+      <app-button label="Logout" (handleClick)="logout()" />
+     } @else {
+      <app-button label="Login" (handleClick)="routeToLogin()" />
+     }
     </div>
     <div class="lg:hidden">
       <svg
@@ -46,7 +59,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="h-6 w-6 cursor-pointer"
+        class="w-6 h-6 cursor-pointer"
       >
         <line x1="4" y1="12" x2="20" y2="12"></line>
         <line x1="4" y1="6" x2="20" y2="6"></line>

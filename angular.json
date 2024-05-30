@@ -29,7 +29,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets/data/blogs.json"
             ],
             "styles": [
               "src/styles.scss"
@@ -93,7 +94,9 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+
+              },
+              "src/assets/data/blogs.json"
             ],
             "styles": [
               "src/styles.scss"
@@ -103,5 +106,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

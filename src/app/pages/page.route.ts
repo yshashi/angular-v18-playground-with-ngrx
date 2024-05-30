@@ -4,7 +4,7 @@ export const PAGE_ROUTE: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
@@ -27,5 +27,10 @@ export const PAGE_ROUTE: Routes = [
       import('./home/blog-detail/blog-detail.component').then(
         (c) => c.BlogDetailComponent
       ),
+  },
+  {
+    path: 'widget',
+    loadComponent: () =>
+      import('./widget/widget.component').then((c) => c.WidgetComponent),
   },
 ];

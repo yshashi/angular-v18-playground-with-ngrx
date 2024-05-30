@@ -1,0 +1,17 @@
+<ng-content select=".head">
+  <h2 class="text-2xl font-bold">Default Header</h2>
+</ng-content>
+
+
+<div class="grid grid-cols-2 gap-5">
+  @for (item of productData(); track item.title) {
+  <div class="py-3">
+    <img width="200" class="object-contain" [src]="item.imageUrl" alt="">
+    <p>{{item.title}}</p>
+  </div>
+  }
+</div>
+
+<ng-content select=".foot">
+  <a href="#" class="font-medium text-blue-600">Default Link</a>
+</ng-content>

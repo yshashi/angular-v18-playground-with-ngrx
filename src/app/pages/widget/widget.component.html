@@ -1,0 +1,20 @@
+<div class="h-screen mt-6">
+  <h1 class="text-6xl font-bold text-center cursor-pointer text-link">Angular v18 New Feature (Default ng-content)</h1>
+<div class="container grid grid-cols-3 gap-5 mx-auto mt-12">
+  <div class="p-3 border shadow-lg">
+    <app-product-widget [productData]="firstWidget" [title]="'First widget'">
+      <h2 class="text-2xl font-bold head">Shop for your home essentials</h2>
+      <a href="#" class="font-medium text-blue-600 foot dark:text-blue-500 hover:underline">Discover more in home</a>
+    </app-product-widget>
+  </div>
+  <div class="p-3 border shadow-lg">
+    <app-product-widget [productData]="secondWidget" title="Second Widget">
+      <h2 class="text-2xl font-bold head">Customers most loved toys</h2>
+      <a href="#" class="font-medium text-blue-600 foot dark:text-blue-500 hover:underline">Explore More</a>
+    </app-product-widget>
+  </div>
+  <div class="p-3 border shadow-lg">
+    <app-product-widget [productData]="thirdWidget" title="Third Widget" />
+  </div>
+</div>
+</div>

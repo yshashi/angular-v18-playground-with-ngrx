@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -11,6 +11,5 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class NotFoundComponent {
   constructor(private router: Router) {
     console.log(router.getCurrentNavigation()?.extras.state);
-    
   }
 }
